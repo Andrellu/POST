@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from "react-router-dom";
+import { NavLink, Redirect } from "react-router-dom";
 import "./imagenes.css";
 import xbox from "./../../assets/images/Consolas/Xbox_consola.png";
 import xbox360 from "./../../assets/images/Consolas/Consola_Xbox360.jpg";
@@ -19,9 +19,23 @@ import NDS2D from "./../../assets/images/Consolas/Consola_NDS2d.jpg";
 import NSOled from "./../../assets/images/Consolas/Consola_NintendoSwitch.jpg";
 
 export default class DetalleXbox extends Component {
+
+    state = {
+        validar: false
+    }
+
+    volverConRedirect(){
+        this.setState({
+            validar: true
+        })
+    }
+
     render() {
         return (
             <div>
+                {this.state.validar===true&&(
+                    <Redirect to={"/home"}/>
+                )}
                 <h1>{this.props.nomConsola}</h1>
                 {this.props.nomConsola === "Xbox"? (
                     <div>
@@ -46,6 +60,7 @@ export default class DetalleXbox extends Component {
                                         Control DVD: mediante un accesorio conectado a las entradas principales de controles comunes, el mismo recibe señales del control en su lector infrarrojo, esto permite disfrutar las películas tal como se haría con un DVD común. Es obligatorio el conectar este dispositivo para la reproducción de un DVD.
                                     </p>
                                 </div>
+                                <button onClick="volverConRedirect()">Volver</button>
                             </div>
                         </div><br/>
                         <NavLink to="/home" className="btn-close"><button type="button" class="btn btn-danger">Close</button></NavLink>
@@ -77,6 +92,7 @@ export default class DetalleXbox extends Component {
                                         Las posibilidades de expansión de la consola vienen dadas por la incorporación de tres puertos USB 2.0, a través de los cuales podremos conectar discos duros externos y otros reproductores y consolas, como el iPod o la PSP, desde los cuales podremos reproducir contenido multimedia.
                                     </p>
                                 </div>
+                                <button onClick={()=>{this.volverConRedirect()}}>Volver</button>
                             </div>
                         </div><br/>
                         <NavLink to="/home" className="btn-close"><button type="button" class="btn btn-danger">Close</button></NavLink>
@@ -100,6 +116,7 @@ export default class DetalleXbox extends Component {
                                         Xbox One carece de un conector RCA y esto lo hace incompatible con los antiguos televisores de rayos catódicos (aunque se pueden conseguir adaptadores especiales de HDMI a Conector RCA relativamente económicos para poder usar la consola con este tipo de aparatos.)
                                     </p>
                                 </div>
+                                <button onClick={()=>{this.volverConRedirect()}}>Volver</button>
                             </div>
                         </div><br/>
                         <NavLink to="/home" className="btn-close"><button type="button" class="btn btn-danger">Close</button></NavLink>
@@ -126,6 +143,7 @@ export default class DetalleXbox extends Component {
                                         El hecho de utilizar la arquitectura Zen 2 supone un salto importante, la nueva CPU no solo duplica en velocidad de reloj a los modelos estándar de Xbox One, sino que además llega a tener más del doble de potencia por ciclo de reloj, suponiendo uno de los saltos más grandes entre generaciones de consolas.
                                     </p>
                                 </div>
+                                <button onClick={()=>{this.volverConRedirect()}}>Volver</button>
                             </div>
                         </div><br/>
                         <NavLink to="/home" className="btn-close"><button type="button" class="btn btn-danger">Close</button></NavLink>
@@ -143,6 +161,7 @@ export default class DetalleXbox extends Component {
                                         La primera consola de la serie, fue PlayStation, que también fue la primera en vender 100 millones de unidades.2​ Su sucesora, PlayStation 2, es la segunda consola de la serie, y la más vendida de la historia hasta la fecha, alcanzando más de 155 millones de unidades vendidas, llegando a estar en el mercado por 13 años.2​ PlayStation 3, ha vendido más de 87 millones de consolas en todo el mundo,3​ después le sigue PlayStation 4 lanzada en 2013 & 2014 con 118 millones de unidades vendidas como la tercera consola en superar dicho formato Y la más reciente consola de Sony, PlayStation 5, lanzada en noviembre de 2020, ha llegado a las 10,1 millones de unidades.4​
                                     </p>
                                 </div>
+                                <button onClick={()=>{this.volverConRedirect()}}>Volver</button>
                             </div>
                         </div>
                         <NavLink to="/home" className="btn-close"><button type="button" class="btn btn-danger">Close</button></NavLink>
@@ -202,6 +221,7 @@ export default class DetalleXbox extends Component {
                                         150 000 000 de partículas por segundo
                                     </p>
                                 </div>
+                                <button onClick={()=>{this.volverConRedirect()}}>Volver</button>
                             </div>
                         </div><br/>
                         <NavLink to="/home" className="btn-close"><button type="button" class="btn btn-danger">Close</button></NavLink>
@@ -225,6 +245,7 @@ export default class DetalleXbox extends Component {
                                         Se introdujeron seis grados de libertad.
                                     </p>
                                 </div>
+                                <button onClick={()=>{this.volverConRedirect()}}>Volver</button>
                             </div>
                         </di>
                         <NavLink to="/home" className="btn-close"><button type="button" class="btn btn-danger">Close</button></NavLink>
@@ -308,6 +329,7 @@ export default class DetalleXbox extends Component {
                                         Salida HDMI™ (compatible con salida HDR)
                                     </p>
                                 </div>
+                                <button onClick={()=>{this.volverConRedirect()}}>Volver</button>
                             </div>
                         </div><br/>
                         <NavLink to="/home" className="btn-close"><button type="button" class="btn btn-danger">Close</button></NavLink>
@@ -333,6 +355,7 @@ export default class DetalleXbox extends Component {
                                         Su lector de Ultra HD Blu-ray será capaz de leer discos de hasta 100 GB, lo cual será útil tanto para recibir juegos de gran tamaño como para reproducir películas en este formato. El juego en la nube, que es una gran apuesta de Sony, también tendrá algún tipo de presencia, pero el formato físico seguirá siendo primordial.
                                     </p>
                                 </div>
+                                <button onClick={()=>{this.volverConRedirect()}}>Volver</button>
                             </div>
                         </div><br/>
                         <NavLink to="/home" className="btn-close"><button type="button" class="btn btn-danger">Close</button></NavLink>
@@ -360,6 +383,7 @@ export default class DetalleXbox extends Component {
                                         Memoria: Memory Stick (hasta 32GB).
                                     </p>
                                 </div>
+                                <button onClick={()=>{this.volverConRedirect()}}>Volver</button>
                             </div>
                         </div><br/>
                         <NavLink to="/home" className="btn-close"><button type="button" class="btn btn-danger">Close</button></NavLink>
@@ -404,6 +428,7 @@ export default class DetalleXbox extends Component {
                                         Formatos: MP3 MPEG-1/2 Audio Layer 3, MP4 (MPEG-4 AAC), WAVE (Linear PCM), MPEG-4 Simple Profile (AAC), H.264/MPEG-4 AVC High/Main/Baseline Profile (AAC), JPEG (Exif 2.2.1), TIFF, BMP, GIF, PNG
                                     </p>
                                 </div>
+                                <button onClick={()=>{this.volverConRedirect()}}>Volver</button>
                             </div>
                         </div><br/>
                         <NavLink to="/home" className="btn-close"><button type="button" class="btn btn-danger">Close</button></NavLink>
@@ -450,6 +475,7 @@ export default class DetalleXbox extends Component {
                                         Compatible prácticamente con todos los juegos de Game Boy, Game Boy Pocket y Game Boy Color.
                                     </p>
                                 </div>
+                                <button onClick={()=>{this.volverConRedirect()}}>Volver</button>
                             </div>
                         </div>
                         <NavLink to="/home" className="btn-close"><button type="button" class="btn btn-danger">Close</button></NavLink>
@@ -471,6 +497,7 @@ export default class DetalleXbox extends Component {
                                         Nintendo DS tenia compatibilidad con Wi-Fi IEEE 802.11b. La unidad también soporta un protocolo especial inalámbrico creado por Nintendo que usa cifrado RSA en la señalización el cual era usado tanto para PictoChat, un chat para consolas DS, como para el sistema de descargas de DS, el cual permitía compartir un cartucho entre dos consolas distintas. El Wi-Fi se usa para acceder a la conexión Wi-Fi de Nintendo donde los usuarios pueden usar Internet o varios usuarios pueden jugar al mismo juego.
                                     </p>
                                 </div>
+                                <button onClick={()=>{this.volverConRedirect()}}>Volver</button>
                             </div>
                         </div><br/>
                         <NavLink to="/home" className="btn-close"><button type="button" class="btn btn-danger">Close</button></NavLink>
@@ -495,6 +522,7 @@ export default class DetalleXbox extends Component {
                                         Ranura para tarjetas de juego, ranura para tarjetas SD, conexión de corriente, conexión de carga, conexión de auriculares.
                                     </p>
                                 </div>
+                                <button onClick={()=>{this.volverConRedirect()}}>Volver</button>
                             </div>
                         </div><br/>
                         <NavLink to="/home" className="btn-close"><button type="button" class="btn btn-danger">Close</button></NavLink>
@@ -516,6 +544,7 @@ export default class DetalleXbox extends Component {
                                         A pesar de no ser capaz de mostrar imágenes en 3D, la Nintendo 2DS lleva una cámara frontal y dos traseras que sí permiten capturar imágenes y vídeos en tres dimensiones que pueden ser almacenadas en la tarjeta de memoria para posteriormente transferirlas a algún otro dispositivo que sí sea capaz de mostrar 3D estereoscópico.
                                     </p>
                                 </div>
+                                <button onClick={()=>{this.volverConRedirect()}}>Volver</button>
                             </div>
                         </div><br/>
                         <NavLink to="/home" className="btn-close"><button type="button" class="btn btn-danger">Close</button></NavLink>
@@ -550,6 +579,7 @@ export default class DetalleXbox extends Component {
                                         Tiempo de carga: 3 horas aproximadamente en modo espera.
                                     </p>
                                 </div>
+                                <button onClick={()=>{this.volverConRedirect()}}>Volver</button>
                             </div>
                         </div><br/>
                         <NavLink to="/home" className="btn-close"><button type="button" class="btn btn-danger">Close</button></NavLink>
