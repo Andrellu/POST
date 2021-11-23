@@ -114,18 +114,18 @@ export default class MenuConsolas extends Component {
                 </span>
                 <ul className="dropdown-menu text-center" aria-labelledby="dropdown03">
                   <li>
-                    {/* <NavLink style={{backgroundColor: "darkgreen", color: "lightgray"}} to="/mostrarXbox" className="dropdown-item">
+                    <NavLink style={{backgroundColor: "darkgreen", color: "lightgray"}} to="/mostrarXbox" className="dropdown-item">
                       <b><img src={logoXbox} alt="xbox" width="100px"/></b>
-                    </NavLink> */}
-                    <a href="/mostrarXbox"><img src={logoXbox} alt="xbox" width="100px"/></a>
+                    </NavLink>
+                    {/* <a href="/mostrarXbox"><img src={logoXbox} alt="xbox" width="100px"/></a> */}
                   </li>
                   {this.state.consolasXBOX.map((consola, index) => {
                       return (
                           <li key={index} className="text-dark">
-                              {/* <NavLink style={{backgroundColor:"lightgreen"}} to={"/mostrarConsola/" + consola} className="nav-link text-dark">
+                              <NavLink style={{backgroundColor:"lightgreen"}} to={"/mostrarConsola/" + consola} className="nav-link text-dark">
                                   {consola}
-                              </NavLink> */}
-                              <a href={"/mostrarConsola/" + consola}>{consola}</a>
+                              </NavLink>
+                              {/* <a href={"/mostrarConsola/" + consola}>{consola}</a> */}
                         </li>
                       );
                   })}

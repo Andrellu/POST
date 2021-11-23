@@ -30,7 +30,7 @@ export default class Router extends Component {
                             return <DetalleConsola nomConsola={consola} />;
                         }}/>
                         {/*RUTA POR SI INTRODUCIMOS UNA URL QUE NO EXISTE*/}
-                        {/* <Route exact path="*" component={Error404}/> */}
+                        <Route exact path="*" component={Error404}/>
                     </Switch>
                 </BrowserRouter>
             </div>
