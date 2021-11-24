@@ -62,10 +62,10 @@ export default class DetalleXbox extends Component {
                                         Control DVD: mediante un accesorio conectado a las entradas principales de controles comunes, el mismo recibe señales del control en su lector infrarrojo, esto permite disfrutar las películas tal como se haría con un DVD común. Es obligatorio el conectar este dispositivo para la reproducción de un DVD.
                                     </p>
                                 </div>
-                                <button onClick={()=>{this.volverConRedirect()}}>Volver</button>
+                                <button onClick={()=>{this.volverConRedirect()}}>Volver Con Redirect</button>
                             </div>
                         </div><br/>
-                        <NavLink to="/home" className="btn-close"><button type="button" class="btn btn-danger">Close</button></NavLink>
+                        <NavLink to="/home" className="btn-close"><button type="button" class="btn btn-danger">Close NavLink</button></NavLink>
                     </div>
                 ) : this.props.nomConsola === "Xbox 360"?(
                     <div>
